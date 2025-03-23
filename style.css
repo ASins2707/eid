@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    color: #444;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+.illustration{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(illustration.jpg) no-repeat top center;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #01fefd;
+    padding-top: 120px;
+    font-size: 90px;
+}
+
+h2{position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #02fefd;
+    padding-top: 120px;
+    font-size: 90px;}
+    
+
+.ilarge, .imeduim, .ismall{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ilarge{
+    background: url(particules_large.png) repeat 0 0;
+    animation: drop 2s linear infinite;
+}
+.imeduim{
+    background: url(particules_medium.png) repeat 0 0;
+    animation: drop 12s linear infinite;
+}.ilarge{
+    background: url(particules_small.png) repeat 0 0;
+    animation: drop 27s linear infinite;
+}
+
+@keyframes drop {
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: 0 413px;
+    }
+}
+
+
+ /* Style for the greeting card */
+.greeting-card {
+    background-color: #f0e68c; /* Light golden background */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Style for the image container */
+.img-container {
+    position: relative;
+    width: 10px; /* Size of the circular path */
+    height: 10px;
+    margin: 50px auto;
+}
+
+/* Style for each image card */
+.img-card {
+    position: absolute;
+    width: 100px; /* Size of each image card */
+    height: 100px;
+    border-radius: 50%; /* Round shape */
+    overflow: hidden;
+    border: 3px solid #f0e68c; /* Golden border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    animation: rotate 10s linear infinite; /* Circular rotation animation */
+    transform-origin: center 150px; /* Adjust for circular path radius */
+}
+
+/* Style for images inside the cards */
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card */
+}
+
+/* Positioning the image cards in a circular path */
+.img-card:nth-child(22) { top: 0; left: 50%; transform: translateX(-50%); }
+ .img-card:nth-child(3) { top: 60%; right: 10%; }
+ .img-card:nth-child(5) { top: 60%; left: 10%; }
+
+/* Circular rotation animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateX(50px) rotate(0deg); /* Adjust radius */
+    }
+    100% {
+        transform: rotate(360deg) translateX(40px) rotate(360deg); /* Adjust radius */
+    }
+}
